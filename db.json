@@ -1,0 +1,26 @@
+{
+    "news":[
+        {
+            "id":1,
+            "picture":"assests/bg-img3.png",
+            "title":"Taking...About The Art Of Glass Recycling",
+            "description":"Visy is a global leader in the pacakging,paper and resource recovery industries.",
+            "link":"Link"
+        },
+        {
+            "id":2,
+            "picture":"assests/bg-img3.png",
+            "title":"Stand Out From The Pack",
+            "description":"Visy is a global leader in the pacakging,paper and resource recovery industries.",
+            "link":"Link"
+        },
+        {
+            "id":3,
+            "picture":"assests/bg-img3.png",
+            "title":"Recycling Re-made Into New Packaging",
+            "description":"Visy is a global leader in the pacakging,paper and resource recovery industries.",
+            "link":"Link"
+        }
+    
+]
+}
