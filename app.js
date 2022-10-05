@@ -44,8 +44,9 @@ document
 });
 
 function moveToNextSlide(){
-  if(slidePosiiton === totalSlides-1){
+  if(slidePosiiton === totalSlides-2){
     prevSlidePosition=totalSlides-1;
+    slides[slidePosiiton].classList.remove('mySlides-visible');
     slidePosiiton=0;
   }
   else{
@@ -53,36 +54,32 @@ function moveToNextSlide(){
     slidePosiiton++;
   }
   console.log(slidePosiiton)
-  updateSlidePosition();
+  updateSlidePosition(1);
 }
 function moveToPreviousSlide(){
   if(slidePosiiton === 0){
     prevSlidePosition=0;
-    slidePosiiton=totalSlides-1;
+    slides[slidePosiiton+1].classList.remove('mySlides-visible');
+    slidePosiiton=totalSlides-2;
   }
   else{
-    prevSlidePosition=slidePosiiton;
+    prevSlidePosition=slidePosiiton+1;
     slidePosiiton--;
   }
   console.log(slidePosiiton)
-  updateSlidePosition();
+  updateSlidePosition(-1);
 }
 slides[slidePosiiton].classList.add('mySlides-visible');
-function updateSlidePosition(){
+slides[slidePosiiton+1].classList.add('mySlides-visible');
 
-  // console.log(slides)
 
-  // for(let i=0;i<slides.length;i++){
-  //   console.log(i,slidePosiiton)
-  //   if(i!==slidePosiiton){
-  //     slides[i].classList.remove('mySlides-visible')
-  //     slides[i].classList.add('mySlides-hidden')
-  //   }
-  // slides[slidePosiiton].classList.remove('mySlides-visible')
+function updateSlidePosition(index){
+
   slides[slidePosiiton].classList.add('mySlides-visible');
-  slides[prevSlidePosition].classList.remove('mySlides-visible')
-  
-  console.log(slidePosiiton, prevSlidePosition)
+  slides[slidePosiiton+1].classList.add('mySlides-visible');
+
+  slides[prevSlidePosition].classList.remove('mySlides-visible');
+  console.log(prevSlidePosition,slidePosiiton)
 }
 
 
