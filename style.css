@@ -55,15 +55,15 @@ body {
   position: absolute;
   height: 2rem;
   width: 2rem;
-  bottom: 4px;
-  left: 11rem;
+  bottom: 5px;
+  left: 13rem;
   list-style: none;
 }
 .input-search {
   border-radius: 3rem;
   border-color: rgb(224, 221, 221);
   height: 2.5rem;
-  width: 15rem;
+  width: 16rem;
   padding-left: 1rem;
 }
 .navbar-item3{
@@ -87,40 +87,42 @@ body {
   width: 12rem;
 }
 .header-component {
+  height: 40rem;
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 48% 48%;
 }
 .header-top-component {
   background-color: #eee;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 2rem;
+  height: 105%;
 }
 .header-bottom-component {
   display: flex;
+  margin: 2rem;
   flex-direction: row;
   column-gap: 1rem;
   height: 150%;
 }
 .header-bottom-left-component {
   background-color: #eee;
-  margin-top: 2rem;
   padding: 2rem;
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .header-bottom-right-component {
   background-color: #eee;
-  margin-top: 2rem;
   padding: 2rem;
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+/*value card styling*/
 .value-card {
   display: flex;
   flex-direction: row;
@@ -137,6 +139,7 @@ body {
 .link-component {
   color: rgb(0, 166, 255);
 }
+/*solution components*/
 .solution-component {
   background-color: #eee;
   padding: 3rem;
@@ -158,17 +161,16 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-
+/*innovation heading*/
 .innovation-components {
   padding: 3rem;
   margin-left: 5rem;
 }
-
 .slides-content{
   font-size: 1.5rem;
   padding: 1rem;
 }
-/* Slideshow container */
+/* Slideshow container  with carousel*/
 .slideshow-container {
   position: relative;
   margin-right: 2rem;
@@ -216,7 +218,7 @@ body {
 .slideshow-container .slideshow-actions button#btn-next{
   margin-right: 1rem;
 }
-
+/*news components styling*/
 .news-section{
   display: flex;
   flex-direction: row;
@@ -232,7 +234,7 @@ body {
   width: 17rem;
   height: 17rem;
 }
-
+/*enquiry section*/
 .enquiry-component {
   padding: 2rem;
   height: 14rem;
@@ -242,6 +244,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+/*footer styling*/
 footer {
   background-color: rgba(132, 132, 132, 0.609);
   padding: 50px 80px;
@@ -271,7 +274,7 @@ footer hr {
   color: white;
   border: 1px solid white;
 }
-
+/*media query*/
 @media only screen and (max-width:1220px){
   .navbar-logo{
     height: 7rem;
@@ -294,8 +297,6 @@ footer hr {
     justify-content: space-around;
   }
 }
-
-
 @media only screen  and (max-width:930px){
   .innovation-components {
     padding: 1rem;
@@ -313,13 +314,26 @@ footer hr {
     width: 200px;
     height: 200px;
   }
-  
 }
-
 @media only screen and (max-width:720px){
   .innovation-components {
     padding: 1rem;
     margin: 1rem;
+  }
+  .content{
+    font-size: 10px;
+  }
+  .button-link{
+    width: 7rem;
+  }
+  .header-top-component{
+    font-size: 9px;
+  }
+  .header-bottom-left-component{
+    font-size: 10px;
+  }
+  .header-bottom-right-component{
+    font-size: 10px;
   }
   .slideshow-container .mySlides img{
     margin-left:3rem;
@@ -339,34 +353,16 @@ footer hr {
     font-size: 10px;
   }
 }
-
 @media only screen and (max-width:530px){
-  .header-top-component{
-    padding: 2%;
-    font-size: 10px;
-  }
-  .header-bottom-left-component{
-    padding: 2%;
-    font-size: 10px;
-
-  }
-  .header-bottom-right-component{
-    padding: 2%;
-    font-size: 10px;
-  }
-  .button-link{
-    width: 7rem;
-  }
-  
   .navbar-nav {
-    display: flex;
-    flex-direction: column;
     font-size: 10px;
-    margin-top: 2rem;
     padding: 0%;
   }
   .navbar-nav ul{
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 12px;
     align-items: center;
   }
   .navbar-item3{

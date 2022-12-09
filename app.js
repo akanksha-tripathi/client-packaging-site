@@ -1,3 +1,6 @@
+//for the news section
+//creating mock json api then fetch the api,
+//storing it in data then assigning it to div element.
 const newsSection=document.getElementById("news-section");
 fetch('http://localhost:3000/news')
   .then((response) =>response.json()).then((data) => {
@@ -20,18 +23,14 @@ const displayNews=(data)=>{
     div.appendChild(description);
     div.appendChild(anchorLink);
     newsSection.appendChild(div);
-    
   });
-
 }
-
-
+//for the carousel part
 console.log(document.getElementsByClassName("slideshow-container")[0])
 let slidePosiiton=0;
 let prevSlidePosition;
 const slides=document.getElementsByClassName('mySlides');
 const totalSlides=slides.length;
-
 document
 .getElementById("btn-next")
 .addEventListener("click", function(){
@@ -42,7 +41,7 @@ document
 .addEventListener("click", function(){
   moveToPreviousSlide();
 });
-
+//for moving to next slide
 function moveToNextSlide(){
   if(slidePosiiton === totalSlides-2){
     prevSlidePosition=totalSlides-1;
@@ -53,9 +52,10 @@ function moveToNextSlide(){
     prevSlidePosition=slidePosiiton;
     slidePosiiton++;
   }
-  console.log(slidePosiiton)
+  //console.log(slidePosiiton)
   updateSlidePosition(1);
 }
+//to move to pervious slide
 function moveToPreviousSlide(){
   if(slidePosiiton === 0){
     prevSlidePosition=0;
@@ -69,15 +69,14 @@ function moveToPreviousSlide(){
   console.log(slidePosiiton)
   updateSlidePosition(-1);
 }
+//to add two carsousel component at one go
 slides[slidePosiiton].classList.add('mySlides-visible');
 slides[slidePosiiton+1].classList.add('mySlides-visible');
 
-
+//to update to other slide position
 function updateSlidePosition(index){
-
   slides[slidePosiiton].classList.add('mySlides-visible');
   slides[slidePosiiton+1].classList.add('mySlides-visible');
-
   slides[prevSlidePosition].classList.remove('mySlides-visible');
   console.log(prevSlidePosition,slidePosiiton)
 }
